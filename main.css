@@ -1,0 +1,284 @@
+:root{
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
+/* Start styling the attribution */
+.attribution { 
+    position: fixed;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem; 
+    line-height: 1.6;
+    text-align: center; 
+    color:hsl(220, 15%, 55%);
+    width: 100%;
+}
+.attribution a { 
+    color: var(--Soft-blue);
+}
+.attribution a:hover{
+    color: var(--Cyan);
+    transition: color .3s;
+}
+
+/* Screen reader class to hide the content visually */
+.sr-only {
+    position: absolute !important;
+    margin: -1px !important;
+    -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+
+/*CSS restart*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*General adjustement*/
+html{
+    font-size: 100%;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*Body and background styling*/
+body{
+    background-image: url("images/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.875rem;
+}
+
+/*Header styling*/
+header{
+    background-color: var(--DarkBlue);
+    width: 85vw;
+    display: grid;
+    padding: 2.5rem 5.5rem 2.5rem 2.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7rem;
+    border-top-right-radius: 30% 50%;
+    box-shadow: 0px 10px 40px -10px var(--VeryDarkBlue);
+}
+
+header > img{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+header .contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.7rem;
+    background-color: var(--VeryDarkBlue);
+}
+
+/*Main Styling*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+main .info{
+    background-color: var(--DarkBlue);
+    width: 85vw;
+    border-radius: 0.7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2rem 3rem;
+    box-shadow: 0px 10px 40px -10px var(--VeryDarkBlue);
+}
+
+
+/* Styling paragraph*/
+main .info > p{
+    color: var(--PaleBlue);
+}
+
+main .info .consum{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+main .info .consum > span{
+    font-weight: 700;
+} 
+
+main .info .zero{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+main .info .thous{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: right;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+/*Styling loading zone*/
+main .loader{
+    width: 100%;
+    height: 1.2rem;
+    border-radius: 1rem;
+    background-color: hsla(229, 57%, 11%, 50%);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 10;
+}
+
+main .loader .load{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 81.5%;
+    height: 0.8rem;
+    margin-left: 0.2rem;
+    border-radius: inherit;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+}
+
+main .loader .load .dot{
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.1rem;
+    background-color: var(--PaleBlue);
+    border-radius: 50%;
+}
+
+/*Styling float left GB*/
+main .rest{
+    position: absolute;
+    z-index: 1000;
+    bottom: 17vh;
+    width: 45vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+}
+
+main .rest .bold{
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: black;
+    margin-right: 0.75rem;
+}
+
+main .rest > p{
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--GrayishBlue);
+}
+
+/*Start Styling responsive design*/
+@media screen and (min-width: 376px){
+    body{
+        background-image: url("images/bg-desktop.png"), linear-gradient(hsl(229, 57%, 11%), hsl(229, 57%, 11%));
+        background-position: bottom;
+        background-size: 100vw 52.5vh, cover;
+    }
+}
+
+@media screen and (min-width: 541px){
+    body{
+        flex-direction: row;
+    }
+    header{
+        width: 23vw;
+        min-width: fit-content;
+        margin-right: 2vw;
+        box-shadow: -10px 30px 100px -20px var(--VeryDarkBlue);
+    }
+
+    main .info{
+        position: relative;
+        top: 1.8vh;
+        width: 35vw;
+        min-width: fit-content;
+        padding: 2rem 2.5rem 2rem;
+        box-shadow: -10px 30px 100px -20px var(--VeryDarkBlue);
+    }
+
+    main .info .consum{
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 960px){
+    main .rest{
+        min-width: fit-content;
+        width: 11.5vw;
+        bottom: 54vh;
+        right: 22.5vw;
+        padding: 0.8rem ;
+    }
+
+    main .rest .bold{
+        font-size: 2.5rem;
+    }
+
+    main .triangle{
+        position: absolute;
+        bottom: 52.5vh;
+        transform: rotate(45deg);
+        right: 21.452vw;
+        z-index: 1100;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent transparent white transparent;
+        border-width: 0 1.5rem 1.5rem 1.5rem;
+    }
+}
